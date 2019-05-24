@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+    <record id="view_for_campos" model="ir.ui.view">
+        <field name="name">view_campos</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="replace">
+                <field name="name"/>
+            </xpath>
+
+            <xpath expr="//field[@name='vat']" position="replace">
+                <field name="vat"/>
+            </xpath>
+
+            <xpath expr="//field[@name='phone']" position="replace">
+                <field name="phone"/>
+            </xpath>
+
+            <xpath expr="//field[@name='email']" position="replace">
+                <field name="email"/>
+            </xpath>
+
+            <xpath expr="//field[@name='mobile']" position="replace">
+                <field name="mobile"/>
+            </xpath>
+
+            <notebook position="inside">
+              <page name="Contabilidad" string="Datos Legales">
+                <group>
+                    <group>
+                      <field name="contract"/>
+                      <field name="identity"/>
+                    </group>
+                    <group>
+                      <field name="reception"/>
+                      <field name="observation"/>
+                    </group>
+                </group>
+              </page>
+            </notebook>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </field>
+    </record>
+  </data>
+</odoo>
