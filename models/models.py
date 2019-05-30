@@ -20,7 +20,7 @@ class addcampus(models.Model):
 
 class RemplaceReference(models.AbstractModel):
 
-    _inherit = 'account.report'
+    _inherit = 'account.aged.partner'
 
 # En la linea 50 se realizaron cambios para cambiar el nombre de la factura en cuentas por cobrar
     @api.model
@@ -56,7 +56,7 @@ class RemplaceReference(models.AbstractModel):
                     if (((aml.invoice_id.type == 'out_invoice') and (aml.invoice_id.journal_id.ncf_control)) or ((aml.invoice_id.type == 'in_invoice') and (aml.invoice_id.journal_id.purchase_type in ['normal', 'minor', 'informal']))):
                         name = aml.invoice_id.reference
                     else:
-                         name = aml.move_id.name if aml.move_id.name else '/',
+                         name = aml.move_id.name if aml.move_id.name else '/'
 
                     vals = {
                         'id': aml.id,
