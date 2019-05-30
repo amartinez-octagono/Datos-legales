@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "campos",
+    'name': "Customizacion octagono",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -10,7 +10,7 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "Alvaro Martinez octagono srl",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail','account_reports'],
 
     # always loaded
     'data': [
