@@ -20,11 +20,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mail','account_reports'],
+    'depends': ['base', 'mail', 'account_reports', 'account'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'views/report_invoice.xml'
         'views/views.xml',
         
     ],
